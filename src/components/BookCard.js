@@ -2,9 +2,10 @@ import React from "react";
 
 const BookCard = props => {
   return (
-    <>
-      <p>Title: {props.results}</p>
-    </>
+    <li>
+      <h1>{props.book.title}</h1>
+      <h3>{props.book.author}</h3>
+    </li>
   );
 };
 
