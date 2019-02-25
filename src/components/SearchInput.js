@@ -13,17 +13,21 @@ const SearchInput = props => {
     fetch(endpoint)
       .then(res => res.json())
       .then(res => {
-        res.items.forEach(val => {
-          books[val.id] = {
-            cover: val.volumeInfo.imageLinks
-              ? val.volumeInfo.imageLinks.thumbnail
-              : "https://via.placeholder.com/130x200",
-            title: val.volumeInfo.title,
-            author: val.volumeInfo.authors,
-            publisher: val.volumeInfo.publisher,
-          };
-          props.addBook(books);
-        });
+        if (res.items) {
+          res.items.forEach(val => {
+            books[val.id] = {
+              cover: val.volumeInfo.imageLinks
+                ? val.volumeInfo.imageLinks.thumbnail
+                : "https://via.placeholder.com/130x200",
+              title: val.volumeInfo.title,
+              author: val.volumeInfo.authors,
+              publisher: val.volumeInfo.publisher,
+            };
+            props.addBook(books);
+          });
+        } else {
+          alert("Invalid keyword(s). Please try again.");
+        }
       })
       .catch(err => {
         console.log(err);
