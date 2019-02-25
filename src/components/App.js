@@ -7,10 +7,8 @@ class App extends Component {
     books: {},
   };
 
-  addBook = book => {
-    const books = { ...this.state.books };
-    books[`book${Date.now()}`] = book;
-    this.setState({ books });
+  addBook = results => {
+    this.setState({ books: results });
   };
 
   render() {
