@@ -2,9 +2,14 @@ import React from "react";
 
 const BookCard = props => {
   return (
-    <li>
-      <h1>{props.book.title}</h1>
-      <h3>{props.book.author}</h3>
+    <li className="book">
+      <img
+        className="thumbnail"
+        alt={props.book.title}
+        src={props.book.cover}
+      />
+      <p className="title">{props.book.title}</p>
+      <p className="author">{props.book.author}</p>
     </li>
   );
 };
