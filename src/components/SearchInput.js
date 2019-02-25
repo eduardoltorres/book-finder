@@ -8,25 +8,30 @@ const SearchInput = props => {
 
     const keyword = keywordRef.current.value.split(" ").join("+");
     const endpoint = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&key=AIzaSyDvXGmZlQqtbBoT3PxybPez7jIh76rtFy8`;
+    const books = {};
 
     fetch(endpoint)
       .then(res => res.json())
       .then(res => {
-        res.items.forEach(val => {
-          const book = {
-            cover: "",
-            title: "",
-            author: "",
-            publisher: "",
-          };
-          book.cover = val.volumeInfo.imageLinks.thumbnail;
-          book.title = val.volumeInfo.title;
-          book.author = val.volumeInfo.authors;
-          book.publisher = val.volumeInfo.publisher;
-          props.addBook(book);
-        });
+        if (res.items) {
+          res.items.forEach(val => {
+            books[val.id] = {
+              cover: val.volumeInfo.imageLinks
+                ? val.volumeInfo.imageLinks.thumbnail
+                : "https://via.placeholder.com/130x200",
+              title: val.volumeInfo.title,
+              author: val.volumeInfo.authors,
+              publisher: val.volumeInfo.publisher,
+            };
+            props.addBook(books);
+          });
+        } else {
+          alert("Invalid keyword(s). Please try again.");
+        }
+      })
+      .catch(err => {
+        console.log(err);
       });
-
     e.currentTarget.reset();
   };
 
