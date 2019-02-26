@@ -32,6 +32,7 @@ const SearchInput = props => {
       })
       .catch(err => {
         console.log(err);
+        alert("Oops! There was an error. Please try again.");
       });
     e.currentTarget.reset();
   };
