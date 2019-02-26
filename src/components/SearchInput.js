@@ -20,8 +20,9 @@ const SearchInput = props => {
                 ? val.volumeInfo.imageLinks.thumbnail
                 : "https://via.placeholder.com/130x200",
               title: val.volumeInfo.title,
-              author: val.volumeInfo.authors,
+              authors: val.volumeInfo.authors,
               publisher: val.volumeInfo.publisher,
+              link: val.volumeInfo.canonicalVolumeLink,
             };
             props.addBook(books);
           });
