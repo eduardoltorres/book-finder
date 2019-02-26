@@ -16,7 +16,7 @@ class App extends Component {
       <div className="wrapper">
         <header>
           <div className="header-container">
-            <h1>Book Finder</h1>
+            {/* <h1>Book Finder</h1> */}
             <SearchInput addBook={this.addBook} />
           </div>
         </header>
