@@ -11,7 +11,7 @@ const BookCard = props => {
       <div className="book__info">
         <p className="title">{props.book.title}</p>
         <p className="authors">
-          {(props.book.authors && props.book.authors.join(", ")) ||
+          {(props.book.authors && props.book.authors.join(", ").slice(0, 35)) ||
             "No authors available."}
         </p>
         <p className="publisher">

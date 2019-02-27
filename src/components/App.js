@@ -14,14 +14,12 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <div className="wrapper__header">
-          <header>
-            <div className="header-container">
-              {/* <h1>Book Finder</h1> */}
-              <SearchInput addBook={this.addBook} />
-            </div>
-          </header>
-        </div>
+        <header>
+          <div className="title-search">
+            <h1>Find A Book!</h1>
+            <SearchInput addBook={this.addBook} />
+          </div>
+        </header>
         <div className="books-container">
           <ul className="books">
             {Object.keys(this.state.books).map(key => (

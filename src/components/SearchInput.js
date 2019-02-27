@@ -30,7 +30,6 @@ const SearchInput = props => {
               publisher: val.volumeInfo.publisher,
               link: val.volumeInfo.canonicalVolumeLink,
             };
-            console.log(val.volumeInfo.authors);
             props.addBook(books);
           });
         } else {
