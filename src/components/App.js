@@ -13,21 +13,23 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <>
         <header>
-          <div className="header-container">
-            {/* <h1>Book Finder</h1> */}
+          <div className="title-search">
+            <h1>Find A Book</h1>
             <SearchInput addBook={this.addBook} />
           </div>
         </header>
-        <div className="books-container">
-          <ul className="books">
-            {Object.keys(this.state.books).map(key => (
-              <BookCard key={key} book={this.state.books[key]} />
-            ))}
-          </ul>
+        <div className="wrapper">
+          <div className="books-container">
+            <ul className="books">
+              {Object.keys(this.state.books).map(key => (
+                <BookCard key={key} book={this.state.books[key]} />
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
