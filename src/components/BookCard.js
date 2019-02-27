@@ -23,7 +23,7 @@ const BookCard = props => {
           rel="noopener noreferrer"
           href={props.book.link}
         >
-          More
+          Details
         </a>
       </div>
     </li>
