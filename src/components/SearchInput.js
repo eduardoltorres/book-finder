@@ -19,11 +19,18 @@ const SearchInput = props => {
               cover: val.volumeInfo.imageLinks
                 ? val.volumeInfo.imageLinks.thumbnail
                 : "https://via.placeholder.com/130x200",
-              title: val.volumeInfo.title,
-              authors: val.volumeInfo.authors,
+              title:
+                val.volumeInfo.title.length > 40
+                  ? val.volumeInfo.title.slice(0, 35) + "..."
+                  : val.volumeInfo.title,
+              authors:
+                val.volumeInfo.authors && val.volumeInfo.authors.length > 2
+                  ? val.volumeInfo.authors.slice(0, 2)
+                  : val.volumeInfo.authors,
               publisher: val.volumeInfo.publisher,
               link: val.volumeInfo.canonicalVolumeLink,
             };
+            console.log(val.volumeInfo.authors);
             props.addBook(books);
           });
         } else {
