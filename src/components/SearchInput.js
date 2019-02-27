@@ -49,7 +49,7 @@ const SearchInput = props => {
         name="keyword"
         ref={keywordRef}
         type="text"
-        placeholder="Type book keyword(s)..."
+        // placeholder="Type book keyword(s)..."
       />
       <button type="submit">Search</button>
     </form>
