@@ -37,7 +37,6 @@ const SearchInput = props => {
         }
       })
       .catch(err => {
-        console.log(err);
         alert("Oops! There was an error. Please try again.");
       });
     e.currentTarget.reset();
@@ -45,13 +44,10 @@ const SearchInput = props => {
 
   return (
     <form onSubmit={getBooks}>
-      <input
-        name="keyword"
-        ref={keywordRef}
-        type="text"
-        // placeholder="Type book keyword(s)..."
-      />
-      <button type="submit">Search</button>
+      <input name="keyword" ref={keywordRef} type="text" />
+      <button className="btn" type="submit">
+        Search
+      </button>
     </form>
   );
 };

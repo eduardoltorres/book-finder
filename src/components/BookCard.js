@@ -17,15 +17,15 @@ const BookCard = props => {
         <p className="publisher">
           {props.book.publisher || "No publisher available."}
         </p>
-        <a
-          className="btn"
-          target="_blank"
-          rel="noopener noreferrer"
-          href={props.book.link}
-        >
-          Details
-        </a>
       </div>
+      <a
+        className="btn book__btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={props.book.link}
+      >
+        Details
+      </a>
     </li>
   );
 };
