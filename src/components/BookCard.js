@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const BookCard = props => {
   return (
@@ -28,6 +29,16 @@ const BookCard = props => {
       </a>
     </li>
   );
+};
+
+BookCard.propTypes = {
+  book: PropTypes.shape({
+    cover: PropTypes.string,
+    title: PropTypes.string,
+    authors: PropTypes.array,
+    publisher: PropTypes.string,
+    link: PropTypes.string,
+  }),
 };
 
 export default BookCard;

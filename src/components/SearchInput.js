@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SearchInput = props => {
   const keywordRef = React.createRef();
@@ -50,6 +51,10 @@ const SearchInput = props => {
       </button>
     </form>
   );
+};
+
+SearchInput.propTypes = {
+  addBook: PropTypes.func.isRequired,
 };
 
 export default SearchInput;
