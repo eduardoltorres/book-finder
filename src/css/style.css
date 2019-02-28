@@ -102,6 +102,7 @@ input {
   z-index: 2;
   outline: none;
   position: relative;
+  margin-left: 15px;
   padding: 10px 60px;
   border-radius: 20px 0;
   font-size: 1rem;
@@ -115,18 +116,31 @@ form button {
   border: none;
   border-radius: 20px 0;
   position: relative;
-  padding: 0 20px 0 40px;
+  padding: 0 20px 0 30px;
   transform: translateX(-20px);
   font-size: 1rem;
   font-weight: 700;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 2.7rem;
   }
   input {
     padding: 5px 20px;
+  }
+  form button {
+    padding: 1px 15px 0 30px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  input {
+    padding: 5px;
+  }
+  form button {
+    padding: 2px 15px 0 25px;
+    font-size: 0.8rem;
   }
 }
 
@@ -158,6 +172,7 @@ form button {
     #9cfaac,
     #91f9b5
   );
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .book__info {
@@ -169,7 +184,7 @@ img {
   width: 130px;
   height: 200px;
   border-radius: 5px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 .title {
@@ -191,5 +206,6 @@ img {
   justify-self: center;
   padding: 10px 20px;
   border-radius: 10px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.02rem;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
 }
