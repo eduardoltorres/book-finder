@@ -7,8 +7,8 @@ class App extends Component {
     books: {},
   };
 
-  addBook = results => {
-    this.setState({ books: results });
+  addBook = books => {
+    this.setState({ books });
   };
 
   render() {
