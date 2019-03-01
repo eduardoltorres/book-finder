@@ -45,10 +45,6 @@ ul {
   text-decoration: none;
 }
 
-.wrapper {
-  padding: 40px;
-}
-
 .btn {
   background: #f9f871;
   text-transform: uppercase;
@@ -104,6 +100,24 @@ ul {
     #732982 83.25%,
     #732982 100%,
     #e7484f 100%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#e7484f),
+    color-stop(16.65%, #e7484f),
+    color-stop(16.65%, #f68b1d),
+    color-stop(33.3%, #f68b1d),
+    color-stop(33.3%, #fced00),
+    color-stop(49.95%, #fced00),
+    color-stop(49.95%, #009e4f),
+    color-stop(66.6%, #009e4f),
+    color-stop(66.6%, #00aac3),
+    color-stop(83.25%, #00aac3),
+    color-stop(83.25%, #732982),
+    color-stop(100%, #732982),
+    to(#e7484f)
   );
   background-image: linear-gradient(
     to right,
@@ -218,16 +232,13 @@ form button {
 
 /* Books Styles */
 
-.books-container:not(:empty) {
-  margin-top: 20px;
-  border-radius: 20px;
-}
-
 .books:not(:empty) {
   display: -ms-grid;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-top: 20px;
+  padding: 0 40px;
 }
 
 .book {
@@ -264,6 +275,16 @@ form button {
     #a8fba2,
     #9cfaac,
     #91f9b5
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    from(#c1fb90),
+    color-stop(#b4fb99),
+    color-stop(#a8fba2),
+    color-stop(#9cfaac),
+    to(#91f9b5)
   );
   background-image: linear-gradient(
     to right top,

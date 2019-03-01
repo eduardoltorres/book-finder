@@ -16,20 +16,23 @@ const SearchInput = props => {
       .then(res => {
         if (res.items) {
           res.items.forEach(val => {
+            const {
+              imageLinks,
+              title,
+              authors,
+              publisher,
+              canonicalVolumeLink,
+            } = val.volumeInfo;
+
             books[val.id] = {
-              cover: val.volumeInfo.imageLinks
-                ? val.volumeInfo.imageLinks.thumbnail
+              cover: imageLinks
+                ? imageLinks.thumbnail
                 : "https://via.placeholder.com/130x200",
-              title:
-                val.volumeInfo.title.length > 40
-                  ? val.volumeInfo.title.slice(0, 35) + "..."
-                  : val.volumeInfo.title,
+              title: title.length > 40 ? title.slice(0, 35) + "..." : title,
               authors:
-                val.volumeInfo.authors && val.volumeInfo.authors.length > 2
-                  ? val.volumeInfo.authors.slice(0, 2)
-                  : val.volumeInfo.authors,
-              publisher: val.volumeInfo.publisher,
-              link: val.volumeInfo.canonicalVolumeLink,
+                authors && authors.length > 2 ? authors.slice(0, 2) : authors,
+              publisher,
+              link: canonicalVolumeLink,
             };
             props.addBook(books);
           });
