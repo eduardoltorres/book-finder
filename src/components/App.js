@@ -20,15 +20,11 @@ class App extends Component {
             <SearchInput addBook={this.addBook} />
           </div>
         </header>
-        <div className="wrapper">
-          <div className="books-container">
-            <ul className="books">
-              {Object.keys(this.state.books).map(key => (
-                <BookCard key={key} book={this.state.books[key]} />
-              ))}
-            </ul>
-          </div>
-        </div>
+        <ul className="books">
+          {Object.keys(this.state.books).map(key => (
+            <BookCard key={key} book={this.state.books[key]} />
+          ))}
+        </ul>
       </>
     );
   }
