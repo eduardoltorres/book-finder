@@ -17,4 +17,4 @@ Feel free to submit any issue or pull request!
 
 ## License
 
-- This project is licensed under the MIT License - see the [LICENSE](https://github.com/eduardoltorres/eduardo-portfolio/blob/master/LICENSE) file for details.
+- This project is licensed under the MIT License - see the [LICENSE](https://github.com/eduardoltorres/book-finder/blob/master/LICENSE) file for details.
