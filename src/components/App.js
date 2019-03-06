@@ -16,9 +16,7 @@ class App extends Component {
       <>
         <header>
           <div className="title-search">
-            <h1>
-              <a href="/">Find A Book</a>
-            </h1>
+            <h1>Find A Book</h1>
             <SearchInput addBook={this.addBook} />
           </div>
         </header>
