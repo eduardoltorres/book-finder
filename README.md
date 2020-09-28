@@ -11,10 +11,6 @@ Type away with a book's title, author, publisher or any keyword you can think of
 - Progressive Web Application (PWA)
 - Mobile responsive
 
-## Contributions
-
-Feel free to submit any issue or pull request!
-
 ## License
 
 - This project is licensed under the MIT License - see the [LICENSE](https://github.com/eduardoltorres/book-finder/blob/master/LICENSE) file for details.
