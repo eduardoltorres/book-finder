@@ -8,7 +8,7 @@ const SearchInput = props => {
     e.preventDefault();
 
     const keyword = keywordRef.current.value.split(" ").join("+");
-    const endpoint = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&maxResults=36&key=AIzaSyDvXGmZlQqtbBoT3PxybPez7jIh76rtFy8`;
+    const endpoint = `https://www.googleapis.com/books/v1/volumes?q=${keyword}&maxResults=36&key=AIzaSyDmCzsq_RskQYF6JQbIF6DnXISur3zrGLY`;
     const books = {};
 
     fetch(endpoint)
